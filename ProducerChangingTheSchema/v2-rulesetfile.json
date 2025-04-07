@@ -1,0 +1,16 @@
+{
+  "ruleSet": {
+    "migrationRules": [
+      {
+        "name": "RewriteOldValue",
+        "kind": "TRANSFORM",
+        "mode": "DOWNGRADE",
+        "type": "JSONATA",
+        "expr": "$merge([$sift($,function($v,$k) {$k != 'card_id'}),{'uppercase_name':$uppercase(owners_name)}])",
+        "onSuccess": "NONE",
+        "onFailure": "ERROR",
+        "disabled": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+"schema" : {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "uppercase_name": {
+      "type": "string"
+    },
+    "purchase_id": {
+      "type": "integer"
+    },
+    "store_id": {
+      "type": "integer"
+    },
+    "store_id_3": {
+      "type": "integer"
+    },
+    "owners_name": {
+      "type": "string"
+    },
+    "transaction_id": {
+      "type": "integer"
+    },
+    "user_id": {
+      "type": "integer"
+    },
+    "accountInvolvementRoleType": {
+      "nullable": true,
+      "type": "string",
+      "description": "The type of relationship sdsdsd that this is with the Account Object - can denote the responsibilities or permissions that the party has on this account object",
+      "enum": [
+        "signatory",
+        "accountOwner",
+        "accountServicer"
+      ]
+    }
+  },
+  "required": [
+    "purchase_id",
+    "store_id",
+    "owners_name",
+    "transaction_id",
+    "user_id"
+  ],
+  "type": "object"
+}
+}
